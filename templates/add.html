@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="{% static 'css/style.css' %}">
+
+    <title>Document</title>
+</head>
+<body>
+  <h3>NEW STUDENT DETAILS</h3>
+
+  <div class='container'>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col">
+              <input type="text" name="student_name" class="form-control" placeholder="enter student name">
+            </div>
+            <div class="col">
+              <input type="text" name="mark1" class="form-control" placeholder="mark1">
+            </div>
+            <div class="col">
+                <input type="text" name="mark2" class="form-control" placeholder="mark2">
+            </div>
+            <div class="col">
+                <input type="text" name="mark3" class="form-control" placeholder="mark3">
+            </div>
+             
+              <div class="col">
+                <input type="submit" >
+              </div>
+          </div>
+      
+        
+        </div>
+        
+    </form>
+  </div>
+</body>
+</html>
